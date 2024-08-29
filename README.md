@@ -1,6 +1,36 @@
-# Google Photos Album Creator
+# Google Photos Album Creator (Limited Functionality)
 
-This project aims to organize existing media items in a user's Google Photos library into albums based on the year they were taken.
+## Project Status: Discontinued
+
+This project was an evening endeavor aimed at organizing a personal Google Photos library. However, due to limitations in the Google Photos API, the project's functionality is severely restricted and is no longer being actively developed.
+
+### The Issue
+
+Google Photos API has restrictions on how third-party applications can interact with user data:
+
+1. Applications can only add media items that they have uploaded to albums they have created.
+2. Existing media items in a user's library cannot be added to new albums created by third-party applications.
+
+These limitations effectively prevent this application from organizing existing photos into new albums, which was the primary goal of this project.
+
+### Current Functionality
+
+Due to these API limitations, the current script can only:
+1. Authenticate with Google Photos
+2. Fetch existing media items for a specified year
+3. Create a new album
+
+However, it cannot add the fetched media items to the newly created album.
+
+### Why This Matters
+
+This situation highlights the challenges users face when trying to gain more control over their personal data stored in cloud services. While Google Photos provides a great service for storing and viewing photos, the restrictions on the API make it difficult for users to organize their libraries in ways that best suit their needs using third-party tools.
+
+For more details on the API limitations, see this [issue tracker discussion](https://issuetracker.google.com/u/1/issues/132274769).
+
+## Original Project Description
+
+This project aimed to organize existing media items in a user's Google Photos library into albums based on the year they were taken.
 
 ## Usage
 
@@ -73,7 +103,7 @@ This project aims to organize existing media items in a user's Google Photos lib
 
 7. **Run the script**:
    ```
-   python photo_album_creator.py
+   python photo_album_creator.py <year> [--no-dryrun] [-v] [--include-archived]
    ```
 
    The script will provide a URL and a code. You need to:
@@ -95,46 +125,3 @@ This project aims to organize existing media items in a user's Google Photos lib
 ## Security Note
 
 Keep your `client_secret.json` file secure and never share it publicly. The `.gitignore` file is set up to prevent accidental commitment of sensitive files.
-
-## Next Steps
-
-This initial setup handles authentication. Future updates will include functionality to list albums and create new albums for specific years.
-
-## Known Issues
-
-When adding media items to an album, some items may fail to be added due to various reasons (e.g., permissions, invalid IDs). The script will attempt to add these items individually and will report the number of successfully added items.
-
-<!-- This was fun to build, but I'm not going to use it. -->
-
-## Project Status: Limited Functionality
-
-This project was an evening endeavor aimed at organizing my personal Google Photos library. However, due to limitations in the Google Photos API, the project's functionality is severely restricted.
-
-### The Issue
-
-Google Photos API has restrictions on how third-party applications can interact with user data. Specifically:
-
-1. Applications can only add media items that they have uploaded to albums they have created.
-2. Existing media items in a user's library cannot be added to new albums created by third-party applications.
-
-These limitations effectively prevent this application from organizing existing photos into new albums, which was the primary goal of this project.
-
-### Why This Matters
-
-This situation highlights the challenges users face when trying to gain more control over their personal data stored in cloud services. While Google Photos provides a great service for storing and viewing photos, the restrictions on the API make it difficult for users to organize their libraries in ways that best suit their needs using third-party tools.
-
-### Current Functionality
-
-Due to these API limitations, the current script can:
-1. Authenticate with Google Photos
-2. Fetch existing media items for a specified year
-3. Create a new album
-
-However, it cannot add the fetched media items to the newly created album.
-
-
-
-### References
-
-For more details on the API limitations, see this [issue tracker discussion](https://issuetracker.google.com/u/1/issues/132274769).
-
