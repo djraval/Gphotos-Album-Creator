@@ -26,6 +26,22 @@ However, it cannot add the fetched media items to the newly created album.
 
 This situation highlights the challenges users face when trying to gain more control over their personal data stored in cloud services. While Google Photos provides a great service for storing and viewing photos, the restrictions on the API make it difficult for users to organize their libraries in ways that best suit their needs using third-party tools.
 
+#### Personal Thoughts and Industry Concerns
+
+The limitations of the Google Photos API raise several concerns:
+
+1. **Data Portability**: The inability to easily organize or export photos limits users' ability to manage their data effectively or migrate to other services.
+
+2. **Vendor Lock-in**: These restrictions can create a form of vendor lock-in, making it challenging for users to switch to alternative services or create local backups.
+
+3. **Long-standing Issues**: The API limitations have been a point of discussion since at least 2019, with no significant changes made to address these concerns [1].
+
+4. **Uncertain Future**: Given Google's history of sunsetting products (e.g., Google Music), users may feel uncertain about the long-term availability of their data [2].
+
+5. **Pricing and Terms Changes**: Without easy data portability, users are more vulnerable to potential changes in pricing or terms of service.
+
+While it's understandable that Google needs to balance user privacy, security, and business interests, greater flexibility in the API could significantly benefit users without compromising these aspects. As consumers increasingly value data ownership and portability, addressing these limitations could enhance user trust and satisfaction with the Google Photos service.
+
 For more details on the API limitations, see this [issue tracker discussion](https://issuetracker.google.com/u/1/issues/132274769).
 
 ## Original Project Description
@@ -125,3 +141,9 @@ This project aimed to organize existing media items in a user's Google Photos li
 ## Security Note
 
 Keep your `client_secret.json` file secure and never share it publicly. The `.gitignore` file is set up to prevent accidental commitment of sensitive files.
+
+## References
+
+[1] Google Issue Tracker. (2019). "Allow adding existing media items to albums." https://issuetracker.google.com/issues/132274769
+
+[2] Welch, C. (2020). "Google is shutting down its Play Music service in September." The Verge. https://www.theverge.com/2020/8/4/21354136/google-play-music-shutdown-youtube-music-transfer-date
